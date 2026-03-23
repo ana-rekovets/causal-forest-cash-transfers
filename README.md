@@ -13,12 +13,13 @@ Replication and extension of heterogeneous treatment effect analysis of the earl
 
 ```text
 .
-├── scripts/
-│   └── analysis_longevity_causal_forest.R   # Main analysis script
+├── figures/                                 # Output figures used in paper/presentation
 ├── paper/
 │   └── Rekovets_Mothers_Pension_Paper.pdf
 ├── presentation/
 │   └── Rekovets_Mothers_Pension_Slides.pdf
+├── scripts/
+│   └── analysis_longevity_causal_forest.R   # Main analysis script
 ├── README.md
 └── data/                                    # Not included — see Data section
     ├── MP_1940.dta
