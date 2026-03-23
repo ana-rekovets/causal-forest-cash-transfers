@@ -1,7 +1,6 @@
 # Long-Term Impacts of Early-Life Cash Transfers: A Causal Forest Approach
 
 **Author:** Anastasiia Rekovets  
-**Institution:** Ludwig-Maximilians-Universität München (M.Sc. Economics)
 
 Replication and extension of heterogeneous treatment effect analysis of the early 20th-century **Mothers' Pension (MP) program** on child longevity. The analysis uses **Generalized Random Forests** (GRF) to estimate Conditional Average Treatment Effects (CATEs) and test for treatment effect heterogeneity across individual, family, and county characteristics.
 
