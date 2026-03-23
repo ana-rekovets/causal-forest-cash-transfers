@@ -14,9 +14,9 @@ Replication and extension of heterogeneous treatment effect analysis of the earl
 .
 ├── figures/                                 # Output figures used in paper/presentation
 ├── paper/
-│   └── Rekovets_Mothers_Pension_Paper.pdf
+│   └── causal-forest-cash-transfers_Paper.pdf
 ├── presentation/
-│   └── Rekovets_Mothers_Pension_Slides.pdf
+│   └── causal-forest-cash-transfers_Slides.pdf
 ├── scripts/
 │   └── analysis_longevity_causal_forest.R   # Main analysis script
 ├── README.md
