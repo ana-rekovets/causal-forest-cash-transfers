@@ -1,4 +1,4 @@
-# Long-Term Impacts of Early-Life Cash Transfers: A Causal Forest Approach
+# Long-Term Impacts of Early-Life Cash Transfers: A Causal Forest Approach 
 
 **Author:** Anastasiia Rekovets  
 
