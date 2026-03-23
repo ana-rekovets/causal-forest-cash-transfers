@@ -1,6 +1,7 @@
-# Long-Term Impacts of Early-Life Cash Transfers: A Causal Forest Approach 
+# Long-Term Impacts of Early-Life Cash Transfers: A Causal Forest Approach
 
 **Author:** Anastasiia Rekovets  
+**Institution:** Ludwig-Maximilians-Universität München (M.Sc. Economics)
 
 Replication and extension of heterogeneous treatment effect analysis of the early 20th-century **Mothers' Pension (MP) program** on child longevity. The analysis uses **Generalized Random Forests** (GRF) to estimate Conditional Average Treatment Effects (CATEs) and test for treatment effect heterogeneity across individual, family, and county characteristics.
 
@@ -89,7 +90,7 @@ base_path <- "path/to/your/data/"
 
 The dataset corresponds to the replication archive for:
 
-> **[Original paper citation — add here]**  
+> **Aizer, A., Eli, S., Ferrie, J., & Lleras-Muney, A. (2016).** The long-run impact of cash transfers to poor families. *American Economic Review*, 106(4), 935-971.  
 > ICPSR Study 112988-V1
 
 ---
@@ -99,29 +100,30 @@ The dataset corresponds to the replication archive for:
 ```r
 # 1. Set your data path in the script
 # 2. Source the script
-source("analysis_longevity_causal_forest.R")
+source("scripts/analysis_longevity_causal_forest.R")
 ```
 
 All output (ATE tables, plots, LaTeX tables) is printed to the console or rendered inline. To save plots, wrap `print()` calls with `ggsave()` or redirect output to a PDF device.
 
 ---
 
-## Key Results (example)
+## Key Results 
 
 | Specification | ATE (log) | 95% CI | Effect (years) |
 |---------------|-----------|--------|----------------|
-| Spec 1: State + Cohort FEs | — | — | — |
-| Spec 2: All controls, no county FE | — | — | — |
-| Spec 3: All controls + county FE | — | — | — |
-| Spec 4: SSA outcome | — | — | — |
-| Trimmed sample | — | — | — |
+| Spec 1: State + Cohort FEs | 0.012 | [-0.002, 0.026] | — |
+| Spec 2: All controls, no county FE | 0.016 | [0.002, 0.030] | — |
+| Spec 3: All controls + county FE | 0.015 | [0.002, 0.028] | 1.09 |
+| Spec 4: SSA outcome | 0.014 | [0.001, 0.027] | — |
+| **Trimmed sample (Main)** | **0.021** | **[0.005, 0.037]** | **1.55** |
 
-*Fill in with your estimates after running the script.*
+*Note: The final trimmed specification reveals significant treatment effect heterogeneity. Omnibus and covariate-specific tests showed that benefits were strongest in counties with lower baseline public spending on education and charities.*
 
 ---
 
 ## References
 
+- Aizer, A., Eli, S., Ferrie, J., & Lleras-Muney, A. (2016). The long-run impact of cash transfers to poor families. *American Economic Review*, 106(4), 935-971.
 - Wager, S., & Athey, S. (2018). Estimation and inference of heterogeneous treatment effects using random forests. *Journal of the American Statistical Association*, 113(523), 1228–1242.
 - Nie, X., & Wager, S. (2021). Quasi-oracle estimation of heterogeneous treatment effects. *Biometrika*, 108(2), 299–319.
 - Tibshirani, J., Athey, S., Friedberg, R., Hadad, V., Hirshberg, D., Mayer, I., Sverdrup, E., Wager, S., & Wright, M. (2024). *grf: Generalized Random Forests* (R package).
@@ -131,4 +133,4 @@ All output (ATE tables, plots, LaTeX tables) is printed to the console or render
 ## License
 
 MIT License. See `LICENSE` for details.
-
+```
